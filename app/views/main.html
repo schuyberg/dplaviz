@@ -1,0 +1,32 @@
+<header class="top">DPLA Data Driven Search Prototype -- v2 @schuyberg, 2014</header>
+<div class="search-container row-fluid">
+<form class="search-area" ng-submit="search();">
+  <input type="search" name="q" ng-model="query.keywords" class=""> <button type="submit">Go!</button>
+</form>
+</div>
+<div class="hits">
+  <p>{{ count }} Items Found.</p>
+    <d3-one-bar data="aggs.type.terms" class="row-fluid" style="width: 100%;"></d3-one-bar>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <!-- <p>Subjects:</p> -->
+    <d3-bar-2 data="aggs.subject.terms" class="row-fluid" style="width: 100%;"></d3-bar-2>
+  </div>
+  <div class="col-sm-8">
+    <!-- <p>Date range:</p> -->
+    <d3-area data="aggs.date" class="row-fluid date-chart" style="width: 100%;"></d3-area>
+
+    <div class="results">
+      <ul class="result" ng-repeat="r in results">
+        <img ng-hide="!r.object" src="{{r.object}}" alt="{{r.sourceResource.title}}">
+        <li > <a href="{{r.isShownAt}}">{{r.sourceResource.title}}</a></li>
+        <li > {{r.sourceResource.creator}}</li>
+        <li > {{r.sourceResource.date.displayDate}}</li>
+        <li > {{r.sourceResource.description[0]}}</li>
+        <li> {{r.provider.name}}</li>
+      </ul>
+    </div>
+    
+  </div>
+</div>

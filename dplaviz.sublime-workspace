@@ -1,0 +1,1098 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"show",
+				"showSidebar"
+			],
+			[
+				"hide",
+				"hideSidebar"
+			],
+			[
+				"init",
+				"initialHandler"
+			],
+			[
+				"seb",
+				"sidebarVisible"
+			],
+			[
+				"togl",
+				"toggleBtn"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"make",
+				"makeQueryString"
+			],
+			[
+				"mak",
+				"makeNaturalStr"
+			],
+			[
+				"query",
+				"querySegments"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"sidebar",
+				"sidebarVisible"
+			],
+			[
+				"sideb",
+				"sidebarVisible"
+			],
+			[
+				"si",
+				"sidebarVisible"
+			],
+			[
+				"get",
+				"getLocation"
+			],
+			[
+				"bnn",
+				"bnnrheightM"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"search",
+				"searchString"
+			],
+			[
+				"upd",
+				"updateSearch"
+			],
+			[
+				"update",
+				"updateQueryString"
+			],
+			[
+				"date",
+				"date"
+			],
+			[
+				"sort",
+				"sort_date"
+			],
+			[
+				"rs",
+				"rSortOptions"
+			],
+			[
+				"bnnr",
+				"bnnrheight"
+			],
+			[
+				"lang",
+				"languageSwitch"
+			],
+			[
+				"lan",
+				"languageSwitch"
+			],
+			[
+				"result",
+				"resultController"
+			],
+			[
+				"es",
+				"esResultService"
+			],
+			[
+				"h",
+				"http"
+			],
+			[
+				"ID",
+				"id"
+			],
+			[
+				"for",
+				"for	Twig : For"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"3px",
+				"3px"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"dcyt",
+				"dcmitype"
+			],
+			[
+				"pu",
+				"publisher"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"t",
+				"t"
+			],
+			[
+				"backgroun",
+				"background-position"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"break",
+				"breakpoint-568"
+			],
+			[
+				"cols",
+				"cols-wrap"
+			],
+			[
+				"sz",
+				"sz568"
+			],
+			[
+				"list-s",
+				"list-style-type"
+			],
+			[
+				"i",
+				"inherit"
+			],
+			[
+				"backroun",
+				"background-color"
+			],
+			[
+				"col",
+				"cols-wrap"
+			],
+			[
+				"ex",
+				"expandfix"
+			],
+			[
+				"dl-bg",
+				"dl-bg-cover"
+			],
+			[
+				"transf",
+				"transform-style"
+			],
+			[
+				"gra",
+				"gray5"
+			],
+			[
+				"ubc-blu",
+				"ubc-blue"
+			],
+			[
+				"blue",
+				"ubc-blue3"
+			],
+			[
+				"ubc",
+				"ubc-blue"
+			],
+			[
+				"doc",
+				"docdata"
+			],
+			[
+				"dc",
+				"docdatajson"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "$icon-font-path: \"/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/\";\n\n@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';\n\n// bower:scss\n// endbower\n\n.browsehappy {\n    margin: 0.2em 0;\n    background: #ccc;\n    color: #000;\n    padding: 0.2em 0;\n}\n\n/* Space out content a bit */\nbody {\n    padding-top: 20px;\n    padding-bottom: 20px;\n}\n\n/* Everything but the jumbotron gets side spacing for mobile first views */\n.header,\n.marketing,\n.footer {\n    padding-left: 15px;\n    padding-right: 15px;\n}\n\n/* Custom page header */\n.header {\n    border-bottom: 1px solid #e5e5e5;\n}\n\n/* Make the masthead heading the same height as the navigation */\n.header h3 {\n    margin-top: 0;\n    margin-bottom: 0;\n    line-height: 40px;\n    padding-bottom: 19px;\n}\n\n/* Custom page footer */\n.footer {\n    padding-top: 19px;\n    color: #777;\n    border-top: 1px solid #e5e5e5;\n}\n\n.container-narrow > hr {\n    margin: 30px 0;\n}\n\n/* Main marketing message and sign up button */\n.jumbotron {\n    text-align: center;\n    border-bottom: 1px solid #e5e5e5;\n}\n\n.jumbotron .btn {\n    font-size: 21px;\n    padding: 14px 24px;\n}\n\n/* Supporting marketing content */\n.marketing {\n    margin: 40px 0;\n}\n\n.marketing p + h4 {\n    margin-top: 28px;\n}\n\n/* Responsive: Portrait tablets and up */\n@media screen and (min-width: 768px) {\n    .container {\n        max-width: 730px;\n    }\n\n    /* Remove the padding we set earlier */\n    .header,\n    .marketing,\n    .footer {\n        padding-left: 0;\n        padding-right: 0;\n    }\n    /* Space out the masthead */\n    .header {\n        margin-bottom: 30px;\n    }\n    /* Remove the bottom border on the jumbotron for visual effect */\n    .jumbotron {\n        border-bottom: 0;\n    }\n}\n",
+			"file": "app/styles/main.scss",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 1736,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!doctype html>\n<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html class=\"no-js lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\"> <!--<![endif]-->\n  <head>\n    <meta charset=\"utf-8\">\n    <title></title>\n    <meta name=\"description\" content=\"\">\n    <meta name=\"viewport\" content=\"width=device-width\">\n    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->\n    <!-- build:css styles/vendor.css -->\n    <!-- bower:css -->\n    <!-- endbower -->\n    <!-- endbuild -->\n    <!-- build:css({.tmp,app}) styles/main.css -->\n    <link rel=\"stylesheet\" href=\"styles/css/main.css\">\n    <!-- endbuild -->\n  </head>\n  <body ng-app=\"v2App\">\n    <!--[if lt IE 7]>\n      <p class=\"browsehappy\">You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n    <![endif]-->\n\n    <!-- Add your site or application content here -->\n    <div class=\"container\" ng-view=\"\"></div>\n\n    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->\n<!--      <script>\n       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n       ga('create', 'UA-XXXXX-X');\n       ga('send', 'pageview');\n    </script> -->\n\n    <!--[if lt IE 9]>\n    <script src=\"bower_components/es5-shim/es5-shim.js\"></script>\n    <script src=\"bower_components/json3/lib/json3.min.js\"></script>\n    <![endif]-->\n\n    <!-- build:js scripts/vendor.js -->\n    <!-- bower:js -->\n    <script src=\"bower_components/jquery/dist/jquery.js\"></script>\n    <script src=\"bower_components/angular/angular.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js\"></script>\n    <script src=\"bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js\"></script>\n    <script src=\"bower_components/angular-resource/angular-resource.js\"></script>\n    <script src=\"bower_components/angular-cookies/angular-cookies.js\"></script>\n    <script src=\"bower_components/angular-sanitize/angular-sanitize.js\"></script>\n    <script src=\"bower_components/angular-route/angular-route.js\"></script>\n    <!-- endbower -->\n    <!-- endbuild -->\n\n        <!-- build:js({.tmp,app}) scripts/scripts.js -->\n        <script src=\"scripts/app.js\"></script>\n        <script src=\"scripts/controllers/main.js\"></script>\n        <!-- endbuild -->\n</body>\n</html>\n",
+			"file": "app/index.html",
+			"file_size": 3945,
+			"file_write_time": 130544302550000000,
+			"settings":
+			{
+				"buffer_size": 3954,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"color",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"colorsc",
+				"Color Scheme Editor: Goto next matching scope"
+			],
+			[
+				"colo",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"colors",
+				"Color Scheme Editor: Goto next matching scope"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"colorsch",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"colorsche",
+				"Color Scheme Editor: Goto previous matching scope"
+			],
+			[
+				"colorscheme",
+				"Color Scheme Editor: Goto next matching scope"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Discover Packages"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"find",
+				"Find: In..."
+			],
+			[
+				"package dis",
+				"Package Control: Discover Packages"
+			],
+			[
+				"spaces",
+				"Preferences: Browse Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ssssa",
+				"Set Syntax: SASS"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Discover Packages"
+			],
+			[
+				"",
+				"Bookmarks: Toggle"
+			],
+			[
+				"sftp key",
+				"Preferences: SFTP Key Bindings"
+			],
+			[
+				"SFTP",
+				"SFTP: Edit Remote Mapping…"
+			],
+			[
+				"FTP",
+				"Preferences: SFTP Settings"
+			],
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
+			[
+				"twig",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"prettif",
+				"HTMLPrettify: Set Keyboard Shortcuts"
+			],
+			[
+				"pa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"css",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"format",
+				"Format Code"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"s",
+				"Set Syntax: Makefile"
+			],
+			[
+				"pack",
+				"Package Control: Discover Packages"
+			],
+			[
+				"poacka",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 70.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/slindber/Dev/dplaviz/v2"
+	],
+	"file_history":
+	[
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/results-list.html",
+		"/Users/slindber/Dev/DL/dl/templates/includes/scripts.twig",
+		"/Users/slindber/Dev/DL/dl/templates/advanced-search.twig",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/results.js",
+		"/Users/slindber/Dev/DL/dl/stylesheets/scss/partials/_theme.scss",
+		"/Users/slindber/Dev/DL/dl/stylesheets/scss/partials/_overrides.scss",
+		"/Users/slindber/Dev/DL/dl/stylesheets/scss/partials/_components.scss",
+		"/Users/slindber/Dev/DL/dl/templates/includes/search-bar.twig",
+		"/Users/slindber/Dev/DL/dl/templates/collections.twig",
+		"/Users/slindber/Dev/DL/dl/stylesheets/scss/modules/_color.scss",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/app.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/adv-search/adv-search.js",
+		"/Users/slindber/Dev/DL/dl/stylesheets/scss/partials/_typography.scss",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/facets/facets.js",
+		"/Users/slindber/Library/Application Support/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
+		"/Users/slindber/Library/Application Support/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/results-lazyload.js",
+		"/Users/slindber/Dev/DL/dl/advanced-search.php",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/services.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/animations.js",
+		"/Users/slindber/Dev/DL/dl/templates/results-NG.twig",
+		"/Users/slindber/Dev/DL/dl/js/dl-index.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/filters.js",
+		"/Users/slindber/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/slindber/Dev/DL/dl/js/DL.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/results-parent.html",
+		"/Users/slindber/Dev/DL/dl/js/dl-jquery.js",
+		"/Users/slindber/Dev/DL/dl/templates/index_page.twig",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/facets.html",
+		"/Users/slindber/Dev/DL/dl/stylesheets/scss/partials/_base.scss",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/dlui.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/pagination.html",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/facet-opts.html",
+		"/Users/slindber/Dev/DL/dl/stylesheets/css/unit.css",
+		"/Users/slindber/Dev/DL/dl/stylesheets/css/unit-original.css",
+		"/Users/slindber/Dev/DL/dl/collection.php",
+		"/Users/slindber/Dev/DL/dl/templates/includes/masthead.twig",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/results-expanded.html",
+		"/Users/slindber/Dev/DL/dl/data/model/dl-json-ld-context-0.4.json",
+		"/Users/slindber/Dev/DL/dl/data/model/dl-json-ld-item-0.4.json",
+		"/Users/slindber/Dev/DL/dl/data/model/7ce949ab92ee4ce43d6f/dl-json-ld-context-0.3.json",
+		"/Users/slindber/Dev/DL/dl/data/datamodel.html",
+		"/Users/slindber/Dev/DL/dl/data/testing/test-site.html",
+		"/Users/slindber/Dev/DL/dl/data/model/dl-json-ld-collection-0.4.json",
+		"/Users/slindber/Dev/DL/dl/data/model/7ce949ab92ee4ce43d6f/dl-json-ld-item-0.3.json",
+		"/Users/slindber/Dev/DL/dl/data/model/7ce949ab92ee4ce43d6f/dl-json-ld-collection-0.3.json",
+		"/Users/slindber/Dev/DL/dl/templates/includes/dl-masthead.twig",
+		"/Users/slindber/Dev/DL/dl/templates/includes/info-overlay.twig",
+		"/Users/slindber/Dev/DL/dl/templates/includes/results-list.twig",
+		"/Users/slindber/Dev/DL/dl/templates/includes/dl-facet.twig",
+		"/Users/slindber/Dev/DL/dl/templates/dl-base.twig",
+		"/Users/slindber/Dev/DL/dl/results.php",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/resultsDirectives.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/results-thumbs.html",
+		"/Users/slindber/Downloads/font-awesome-4.1.0/scss/font-awesome.scss",
+		"/Users/slindber/Downloads/font-awesome-4.1.0/css/font-awesome.css",
+		"/Users/slindber/Dev/DL/dl/js/ng/ng-src/angularui/angular-bootstrap/ui-bootstrap.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/results-compact.html",
+		"/Users/slindber/Dev/DL/dl/js/elasticsearch/elasticsearch.min.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/facets",
+		"/Users/slindber/Dev/DL/dl/js/ng/tests/home.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/karma.conf.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/tests/test.test.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/tests/results.test.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/test.html",
+		"/Users/slindber/Dev/DL/dl/js/ng/tests/home.test.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/tests/tests/app.test.js",
+		"/Users/slindber/Desktop/0.jpg",
+		"/Users/slindber/Dev/DL/dl/js/ng/ng-src/angularui/pagination.js",
+		"/Users/slindber/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/slindber/Dev/DL/dl/js/cardRows.js",
+		"/Users/slindber/Dev/DL/dl/data/dummy/results-optimal.json",
+		"/Users/slindber/Dev/DL/dl/templates/base_ubc_clf.twig",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/test/results-expanded.html",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/results/templates/results-parent.html.test.html",
+		"/Users/slindber/Dev/DL/dl/results-NG.php",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/resultsModule/resultsControllers.js",
+		"/Users/slindber/Dev/DL/dl/js/ng/app/resultsModule/resultsService.js",
+		"/Users/slindber/Dev/DL/dl/data/dummy/results.json",
+		"/Users/slindber/Dev/DL/dl/js/ng/elasticsearch.angular.min.js",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/yo-ng/app/bower_components/elasticsearch/elasticsearch.angular.min.js",
+		"/Users/slindber/Dev/DL/dl/sftp-config.json",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/yo-ng/app/views/main.html",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/yo-ng/app/favicon.ico",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/ng-compass-boilerplate/src/app/app.js",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/ng-compass-boilerplate/src/index.html",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/ng-compass-boilerplate/Gruntfile.js",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/ng-compass-boilerplate/src/app/home/home.js",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/ng-compass-boilerplate/environment.json",
+		"/Users/slindber/Dropbox/dev/ng-boilerplate/ng-load-recipes.js",
+		"/Users/slindber/Dev/DL/dl2/js/ng/app/app.js",
+		"/Users/slindber/Dev/DL/dl2/data/dummy/collections.json",
+		"/Users/slindber/Dev/DL/dl2/data/dummy/results.json",
+		"/Users/slindber/Dev/DL/dl2/js/ng/test.html",
+		"/Users/slindber/Dev/DL/dl2/data/model/7ce949ab92ee4ce43d6f/dl-json-ld-model-v0.2.json",
+		"/Users/slindber/Dev/DL/dl2/data/model/7ce949ab92ee4ce43d6f/dl-json-ld-collection-0.3.json",
+		"/Users/slindber/Dev/DL/dl2/data/model/data_model-v2.json",
+		"/Users/slindber/Dev/DL/dl2/results-NG.php",
+		"/Users/slindber/Dev/DL/dl2/templates/results-NG.twig",
+		"/Users/slindber/Dev/DL/dl2/js/cardRows.js",
+		"/Users/slindber/Dev/DL/dl2/js/DL.js",
+		"/Users/slindber/Library/Application Support/Sublime Text 3/Packages/User/Monokai (SL).tmTheme",
+		"/Users/slindber/Dev/DL/dl2/templates/includes/results-view.twig",
+		"/Users/slindber/Dev/DL/dl2/js/ng/app/services.js",
+		"/Users/slindber/Dev/DL/dl2/templates/collections.twig",
+		"/Users/slindber/Dev/DL/dl2/admin-edit-col.php",
+		"/Users/slindber/Dev/DL/dl2/templates/admin-edit-col.twig",
+		"/Users/slindber/Dev/DL/dl2/stylesheets/scss/partials/_components.scss",
+		"/Users/slindber/Dev/DL/dl2/collections.php",
+		"/Users/slindber/Dev/DL/dl2/collection.php",
+		"/Users/slindber/Dev/DL/dl2/data/dummy/dl-collection.json",
+		"/Users/slindber/Dev/DL/dl2/stylesheets/scss/partials/_theme.scss",
+		"/Users/slindber/Dev/DL/dl2/stylesheets/scss/modules/_color.scss",
+		"/Users/slindber/Dev/DL/dl2/templates/results.twig",
+		"/Users/slindber/Dev/DL/dl2/data/example-CDM/trout.json",
+		"/Users/slindber/Dev/DL/dl2/admin-collections.php",
+		"/Users/slindber/Dev/DL/dl2/templates/admin-collections.twig",
+		"/Users/slindber/Dev/DL/dl2/stylesheets/css/screen.css",
+		"/Users/slindber/Dev/DL/dl2/templates/fw-clf.twig",
+		"/Users/slindber/Dev/DL/dl2/data/model/dl-data-model-v1.json",
+		"/Users/slindber/Dev/DL/dl2/data/model/dl-item-lvl-v1.json",
+		"/Users/slindber/Dev/DL/dl2/stylesheets/scss/modules/_theme-patterns.scss",
+		"/Users/slindber/Dev/DL/dl2/stylesheets/scss/colors.scss",
+		"/Users/slindber/Dev/DL/dl2/data/dummy/colgroups.json",
+		"/Users/slindber/Dev/DL/dl2/data/dl-data-model-v1.json",
+		"/Users/slindber/Dev/DL/dl2/data/item-lvl.json",
+		"/Users/slindber/Dev/DL/dl2/templates/collection.twig",
+		"/Users/slindber/Dev/DL/dl2/templates/includes/masthead.twig"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"this file",
+			"<open files>",
+			"",
+			"current file",
+			"",
+			"/Users/slindber/Dev/DL/dl2/js/deprec",
+			"",
+			"DL.js",
+			"",
+			"_components.scss",
+			"<open project>",
+			"<open files>,<open folders>",
+			"<open files>",
+			"",
+			"/Users/slindber/Dev/DL/DigLib",
+			"",
+			"<selection>",
+			"_theme.css",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"400",
+			"element",
+			"this",
+			"979query",
+			"sidebarVisible",
+			"toggleBtn",
+			"32",
+			"top",
+			"20",
+			"100",
+			"140px",
+			"200px",
+			"30",
+			"class=\"dl-srch-svg\"",
+			"40px",
+			"333.333",
+			"nobile",
+			"none",
+			"col",
+			"sbj",
+			"col",
+			"key",
+			"date",
+			"creator",
+			"collection",
+			"*****************/\n",
+			"filters",
+			"aggs",
+			"results",
+			"resultsApp",
+			"segment",
+			"value",
+			"search",
+			"ping(",
+			"s.",
+			"s",
+			"getFields",
+			"search",
+			"input",
+			"srch-bg",
+			"6px",
+			"54px",
+			"all",
+			"span",
+			"tracker",
+			"32px",
+			"of",
+			"srch-bg",
+			"180px",
+			"140px",
+			"h2",
+			"anyAll",
+			"results",
+			"resultsApp",
+			"dlApp",
+			"t",
+			"bindEvent",
+			"body",
+			"target",
+			"menu",
+			"400",
+			"300",
+			"resultsview",
+			"sidebar",
+			"- 5",
+			"element.width()",
+			"showSidebar",
+			"navwidth",
+			"showLess",
+			"showAll",
+			"sidebar.sidebarVisible",
+			"$scope",
+			"80",
+			"rootScope",
+			"scope",
+			"sidebar",
+			"50",
+			"100",
+			"ng-class",
+			"dlinterface",
+			" console.log",
+			"=<",
+			"420",
+			"320",
+			"updateRCols()",
+			"rsort",
+			"nav-toggle",
+			"#nav-toggle",
+			"div",
+			";\n",
+			"clearAllFilters",
+			"updateQueryString",
+			"clearAll",
+			"10px",
+			"facets-clear",
+			"'",
+			"isOpen",
+			"all",
+			".open",
+			"open",
+			"isOpen",
+			"open",
+			"20",
+			"newSearch",
+			"updateSearch",
+			"updatesearch",
+			"s.input",
+			"$scope.q",
+			"scope.q",
+			"startsearch",
+			"filtercount",
+			"input",
+			"console",
+			".state",
+			"$(a)",
+			"14px",
+			"button",
+			"div",
+			"$scope.",
+			"select",
+			"bnnrheight",
+			"bblue",
+			"$ubc-blue",
+			"\"",
+			"response",
+			"dc",
+			"class",
+			"item"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"location.search().q",
+			"$location.search().q",
+			"	",
+			"'",
+			"$max-568",
+			"max-568",
+			"max-767",
+			"max-979",
+			"979",
+			"&:hover, &:focus",
+			"dl-thm-base",
+			"dl-subg-current",
+			"dl-g-cont",
+			"dl-g-current",
+			"dl-groups",
+			"$break-1200",
+			"",
+			"\"",
+			"break-xsm",
+			"dl-card",
+			"hidden",
+			":first",
+			"*",
+			"%",
+			":",
+			"-",
+			"border-left-radius",
+			"border-right-radius",
+			"right",
+			"%"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/styles/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								378,
+								378
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1109,
+								1109
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 317.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 25.0
+	},
+	"project": "dplaviz.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"admin-edit-col.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dev/wbtw2/wbtw2.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 395.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
