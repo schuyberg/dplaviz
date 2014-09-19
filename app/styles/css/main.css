@@ -15861,7 +15861,10 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003104}}
+/********************
+    MY STYLES
+*********************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003106}}
 header.top, .search-container {
   margin-left: -25px;
   margin-right: -25px;
@@ -15869,26 +15872,23 @@ header.top, .search-container {
   padding-right: 25px;
 }
 
-/********************
-    MY STYLES
-*********************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003141}}
 html {
   box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003144}}
 *, *:before, *:after {
   box-sizing: border-box !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003148}}
 body {
   padding-top: 0;
   background-color: #EFEFEF;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003153}}
 header.top {
   background-color: black;
   color: #EFEFEF;
@@ -15896,40 +15896,86 @@ header.top {
   margin-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003161}}
 .search-container {
-  background: #5f5f5f;
+  min-height: 85px;
+  background: #7f7f7f;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003167}}
 .search-area {
   max-width: 700px;
-  margin: 0 auto 12px auto;
-  padding: 1em;
+  margin: 0 auto 0 auto;
+  padding-top: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003173}}
 .search-area input[type="search"] {
   min-width: 100%;
   margin: 1em -54px 1em 0;
   height: 31px;
   border: 1px solid black;
-  text-indent: 1em;
+  text-indent: 0.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003180}}
 .search-area button {
   display: inline;
   background: orange;
   width: 50px;
   margin: 0;
   height: 29px;
-  border: 1px solid black;
+  border: 1px solid white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003188}}
+.search-area button:hover {
+  font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003163}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003194}}
+.limits {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003199}}
+button.limiters {
+  background-color: orange;
+  font-size: 0.77em;
+  margin: 0 3px 6px 0;
+  border: 1px solid black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003205}}
+button.limiters:hover {
+  border: 1px solid white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003211}}
+.loading {
+  position: absolute;
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  margin-left: -15px;
+  z-index: 100;
+  background-color: rgba(250, 250, 250, 0.8);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003221}}
+.loading p {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  width: 120px;
+  margin-left: -60px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003233}}
 .hits {
+  margin-top: 6px;
   margin-bottom: 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003236}}
 .hits p {
   text-align: center;
   display: block;
@@ -15938,13 +15984,13 @@ header.top {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003245}}
 .results {
   margin-top: 12px;
   background-color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003250}}
 .result {
   border-top: 1px solid #EFEFEF;
   border-bottom: 1px solid #EFEFEF;
@@ -15952,10 +15998,94 @@ header.top {
   padding: 1em;
   list-style-type: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003257}}
 .result img {
   float: left;
   margin-right: 6px;
   margin-bottom: 6px;
   max-width: 100px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003266}}
+.subj-chart .bar:hover {
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003268}}
+.subj-chart .bar:hover text {
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003303}}
+.type-chart .too-short {
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003308}}
+.type-chart g:hover {
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003310}}
+.type-chart g:hover .b-text {
+  transition: visibility 0s linear 0.3s,opacity 0.3s linear, font-weight 0.3s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003315}}
+.type-chart g:hover > .b-text {
+  visibility: visible;
+  font-weight: bold;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003324}}
+.brush {
+  .shape-rendering: crispEdges;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003326}}
+.brush .extent {
+  fill: none;
+  fill-opacity: .125;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003333}}
+.brushbg .bbg {
+  fill: black;
+  fill-opacity: .125;
+}
+
+@media (max-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003341}}
+  .subj-col {
+    max-height: 365px;
+    overflow: hidden;
+    overflow-y: auto;
+    border-top: 1px solid #939393;
+    border-bottom: 1px solid #939393;
+    padding: 3px 0;
+    margin: 0 20px;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003354}}
+.loading.ng-hide-add, .loading.ng-hide-remove {
+  transition: 0s linear all;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003358}}
+.loading.ng-hide-add-active,
+.loading.ng-hide-remove-active {
+  /* the transition is defined in the active class */
+  transition: 1s linear all;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003364}}
+.loading.ng-hide-remove-active {
+  -webkit-animation: fadeIn 3s;
+  animation: fadeInRight 3s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003368}}
+.loading.ng-hide-add-active {
+  -webkit-animation: fadeOut 3s;
+  animation: fadeOut 3s;
+  display: block !important;
 }

@@ -4,7 +4,8 @@ angular
   .module('v2App', [
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'd3directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
