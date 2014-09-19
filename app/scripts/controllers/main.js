@@ -1,43 +1,58 @@
 'use strict';
 
 angular.module('v2App')
-  .controller('MainCtrl', function ($scope, $http, $q) {
+  .controller('MainCtrl', function ($scope, $http, $q, $timeout) {
 
     $scope.query = {
-            keywords : 'forest',
-            size : 25
+            keywords : 'forest'
         };
 
     $scope.limiters = {
         type: [],
         subject: [],
-        dateBefore: [],
-        dateAfter: []
+        dateAfter: '',
+        dateBefore: ''
+        
     }
+
+    $scope.results = {};
 
     var queryOpts = {
         key: '1068fc55492c7f63c961485c136ee67f',
         url: 'http://api.dp.la/v2/items?q=',
-        facets: 'sourceResource.date.begin,sourceResource.subject.name,sourceResource.type,sourceResource.spatial.name'
+        facets: 'sourceResource.date.begin,sourceResource.subject.name,sourceResource.type,sourceResource.spatial.name',
+        size : 6,
+        page : 1
     };
 
+    var apiCall;
 
-    
+
+    function makeApiString() {
+        apiCall = queryOpts.url;
+        apiCall += $scope.query.keywords;
+
+        apiCall += ("&sourceResource.type=" + $scope.limiters.type.toString()); 
+        apiCall += ("&sourceResource.subject=" + encodeURI($scope.limiters.subject.toString()));
+
+        if ($scope.limiters.dateAfter) { apiCall += ("&sourceResource.date.after=" + $scope.limiters.dateAfter)}
+        if ($scope.limiters.dateBefore) { apiCall += ("&sourceResource.date.before=" + $scope.limiters.dateBefore)}
+
+        apiCall += ("&page_size=" + queryOpts.size);
+        apiCall += ('&facets=' + queryOpts.facets);
+        apiCall += ('&page=' + queryOpts.page);
+
+        apiCall += ("&callback=JSON_CALLBACK" + '&api_key=' + queryOpts.key);
+    }
+
+
     $scope.search = function() {
 
         $scope.loading = true;
 
-            var apiCall = queryOpts.url 
-                    + $scope.query.keywords
-                    + "&sourceResource.type=" + $scope.limiters.type.toString()
-                    + "&sourceResource.subject=" + $scope.limiters.subject.toString()
-                    + "&page_size=" + $scope.query.size
-                    + '&facets=' + queryOpts.facets
-                    + "&callback=JSON_CALLBACK" 
-                    + '&api_key=' + queryOpts.key;
+        makeApiString();
 
         console.log('apicall', apiCall);
-
 
         $http.jsonp(apiCall).
              success(function(data, status, headers, config) {
@@ -45,12 +60,14 @@ angular.module('v2App')
                 $scope.loading = false;
               
                 var d = data;
-                console.log(d);
+                // console.log(d);
 
                 $scope.count = d.count;
 
-
                 $scope.results = d.docs;
+
+                console.log(d.docs);
+
 
                 $scope.aggs = {
 
@@ -58,7 +75,6 @@ angular.module('v2App')
                     subject : d.facets['sourceResource.subject.name'],
                     date : d.facets['sourceResource.date.begin'].entries
                 }
-
                 // console.log($scope.aggs.date);
 
              }).
@@ -68,7 +84,41 @@ angular.module('v2App')
 
                 $scope.error = true;
 
-             });
+            });
+    }
+
+    $scope.loadMore = function(){
+
+        console.log('LOADMORE', queryOpts.page)
+
+        $scope.loadingMore = true;
+
+        queryOpts.page++;
+
+        makeApiString();
+
+        $http.jsonp(apiCall).
+             success(function(data, status, headers, config) {
+
+                $scope.loadingMore = false;
+
+                var d = data;
+
+                // var existingresults = $scope.results;
+
+                $scope.results = $scope.results.concat(d.docs);
+
+                console.log($scope.results);
+
+             }).
+             error(function(data, status, headers, config) {
+
+                $scope.loadingMore = false;
+
+                $scope.error = true;
+
+            });
+
     }
 
     // add & remove filters
@@ -103,10 +153,24 @@ angular.module('v2App')
         }
     }
 
+    $scope.addDateFilter = function(start, end){
+        $scope.limiters.dateAfter = start;
+        $scope.limiters.dateBefore = end;
+        $scope.dateFilter = start + ' to ' + end;
+        $scope.search();
+    }
+
+    $scope.rmDateFilter = function(){
+        $scope.limiters.dateAfter = '';
+        $scope.limiters.dateBefore = '';
+        $scope.dateFilter = '';
+        $scope.search();
+    }
+
     // pass data from child directives (d3)
-    $scope.onClick = function(data){
+    $scope.onClick = function(f){
         $scope.$apply(function(){
-            data
+            f
         });
     }
 

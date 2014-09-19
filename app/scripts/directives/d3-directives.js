@@ -311,7 +311,8 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
         restrict: 'EA',
         scope: {
             data: '=',
-            title: '@'
+            title: '@',
+            onClick: '&'
         },
         link: function(scope, ele, attrs){
             var renderTimeout;
@@ -365,7 +366,8 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                 var width = ele.parent().width() - margin.right - margin.left,
                     chartHeight = height - margin.top - margin.bottom;
 
-                var parseDate = d3.time.format('%Y-%m-%d').parse;
+                var dateFormat = d3.time.format('%Y-%m-%d');
+                var parseDate = dateFormat.parse;
                 // var parseDate = d3.time.format("%d-%b-%y").parse;
 
                 var x = d3.time.scale()
@@ -377,7 +379,8 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                 var xAxis = d3.svg.axis()
                             .scale(x)
                             .orient('bottom')
-                            .ticks(10);
+                            .ticks(10)
+                            .tickSize(6, 6);
 
                 var yAxis = d3.svg.axis()
                             .scale(y)
@@ -387,7 +390,7 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                 var emptyArea = d3.svg.area()
                                 .x(function(d) { return x(d.date) })
                                 .y(chartHeight)
-                                .interpolate('monotone');
+                                .interpolate('basis');
 
                 var area = d3.svg.area()
                             .x(function(d) { return x(d.date) })
@@ -486,7 +489,8 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
 
                 brushg.selectAll(".resize")
                     .append('rect')
-                        .attr('width', 2)
+                        .attr('x', '-2')
+                        .attr('width', 4)
                         .style('visibility', 'visible')
                         .style('fill', 'red')
 
@@ -506,7 +510,7 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
 
                 function brushstart() {
                     // updateBBG();
-                    console.log('brushstart', brush.extent());
+                    // console.log('brushstart', brush.extent());
                   // svg.classed("selecting", true);
                 }
 
@@ -519,10 +523,22 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                 }
 
                 function brushend() {
-                  if (brush.empty()){
+                    // if empty or full domain return without call to refresh and clear bg
+                  if (brush.empty() || d3.values(brush.extent()).join() === d3.values(x.domain()).join()
+                    ){
                     brushbg.selectAll('.bbg')
                         .attr('width', 0);
+                        return;
+                    } else {
+
+                        var eStart = dateFormat(brush.extent()[0]);
+                        var eEnd = dateFormat(brush.extent()[1]);
+
+                        // console.log(eStart, eEnd);
+
+                        return scope.onClick({start: eStart, end: eEnd});
                     }
+
                 }
 
                 function updateBBG() {

@@ -5,7 +5,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'd3directives'
+    'd3directives',
+    'infinite-scroll'
   ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -7,6 +7,7 @@
 <div class="limits">
   <button class="limiters" ng-repeat="l in limiters.type" ng-click="rmTypeFilter(l)">Type: {{l}}s  [x]</button>
   <button class="limiters" ng-repeat="l in limiters.subject" ng-click="rmSubjFilter(l)">Subject: {{l}}  [x]</button>
+  <button class="limiters" ng-hide="!dateFilter" ng-click="rmDateFilter(l)">Date range: {{dateFilter}}  [x]</button>
 </div>
 </div>
 <div class="loading" ng-show="loading" ng-animate>
@@ -24,16 +25,20 @@
 
  <div class="col-sm-8">
     <!-- <p>Date range:</p> -->
-    <d3-area data="aggs.date" title="Date range" class="row-fluid date-chart" style="width: 100%;"></d3-area>
+    <d3-area data="aggs.date" title="Date range" class="row-fluid date-chart" style="width: 100%;" on-click="addDateFilter(start, end)"></d3-area>
+
+    <div class="results-top">
+      Results:
+    </div>
 
     <div class="results">
-      <ul class="result" ng-repeat="r in results">
-        <img ng-hide="!r.object" src="{{r.object}}" alt="{{r.sourceResource.title}}">
-        <li > <a href="{{r.isShownAt}}">{{r.sourceResource.title}}</a></li>
+      <ul class="result" ng-repeat="r in results track by $index" >
+      <a href="{{r.isShownAt}}" target="_blank"><img ng-hide="!r.object" src="{{r.object}}" alt="{{r.sourceResource.title}}"></a>
+        <li class="title"> <a href="{{r.isShownAt}}" target="_blank">{{r.sourceResource.title}}</a></li>
         <li > {{r.sourceResource.creator}}</li>
         <li > {{r.sourceResource.date.displayDate}}</li>
         <li > {{r.sourceResource.description[0]}}</li>
-        <li> {{r.provider.name}}</li>
+        <li class="provider">{{r.provider.name}}</a></li>
       </ul>
     </div>
     

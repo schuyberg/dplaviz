@@ -242,12 +242,18 @@ button.limiters {
     }
 }
 
+.results-top {
+    @extend .row;
+
+}
+
 .results {
     margin-top: 12px;
     background-color: white;
 }
 
 .result {
+    font-size: 0.9em;
     @extend .row;
     border-top: 1px solid #EFEFEF;
     border-bottom: 1px solid #EFEFEF;
@@ -260,6 +266,35 @@ button.limiters {
         margin-bottom: 6px;
         max-width: 100px;
     }
+    .title {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    .provider {
+        color: green;
+    }
+}
+
+// Responsive
+
+.subj-col {
+    @media (max-width: 768px) {
+        max-height: 365px;
+        overflow: hidden;
+        overflow-y: auto;
+        border-top: 1px solid #939393;
+        border-bottom: 1px solid #939393;
+        padding: 3px 0;
+        margin: 0 20px;
+    }
+}
+
+// Charts
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
 
 .subj-chart {
@@ -335,20 +370,6 @@ button.limiters {
         fill-opacity: .125;
     }
 } 
-
-// Responsive
-
-.subj-col {
-    @media (max-width: 768px) {
-        max-height: 365px;
-        overflow: hidden;
-        overflow-y: auto;
-        border-top: 1px solid #939393;
-        border-bottom: 1px solid #939393;
-        padding: 3px 0;
-        margin: 0 20px;
-    }
-}
 
 // NG ANIMATIONS
 .loading.ng-hide-add, .loading.ng-hide-remove {
