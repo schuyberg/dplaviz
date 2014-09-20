@@ -21,8 +21,8 @@ angular.module('v2App')
         key: '1068fc55492c7f63c961485c136ee67f',
         url: 'http://api.dp.la/v2/items?q=',
         facets: 'sourceResource.date.begin,sourceResource.subject.name,sourceResource.type,sourceResource.spatial.name',
-        size : 6,
-        page : 1
+        size : 10,
+        page : 0
     };
 
     var apiCall;
@@ -47,6 +47,8 @@ angular.module('v2App')
 
 
     $scope.search = function() {
+
+        queryOpts.page = 0;
 
         $scope.loading = true;
 
