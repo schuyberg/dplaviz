@@ -189,11 +189,19 @@ header.top {
             font-weight: bold;
         }
     }
+
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
 }
 
 .limits {
     max-width: 900px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
 }
 
 button.limiters {
@@ -205,6 +213,51 @@ button.limiters {
     &:hover {
         border: 1px solid white;
     }
+}
+
+.prompt {
+    max-width: 600px;
+    background: orange;
+    padding: 20px 20px;
+    text-align: center;
+    margin: -10px auto 0 auto;
+    position: relative;
+
+    -webkit-box-shadow: 4px 4px 19px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    4px 4px 19px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         4px 4px 19px 0px rgba(50, 50, 50, 0.5);
+
+    h2 {
+        vertical-align: middle;
+    }
+
+    &:after {
+        max-width: 600px;
+        z-index: 100;
+        top: -20px;
+        left: 30px;
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid orange;
+
+    }
+
+}
+
+.about-link {
+    float: right;
+}
+
+.about {
+    max-width: 600px;
+    background: white;
+    margin: 50px auto;
+    padding: 15px 20px;
+    border: 1px solid #9f9f9f;
 }
 
 
@@ -239,6 +292,9 @@ button.limiters {
         max-width: 700px;
         margin: 0 auto;
         font-weight: bold;
+        @media (max-width: 768px) {
+        max-width: 90%;
+        }
     }
 }
 
@@ -249,10 +305,10 @@ button.limiters {
 
 .results {
     margin-top: 12px;
-    background-color: white;
 }
 
 .result {
+    background: white;
     font-size: 0.9em;
     @extend .row;
     border-top: 1px solid #EFEFEF;

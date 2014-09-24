@@ -3,180 +3,212 @@
 angular.module('v2App')
   .controller('MainCtrl', function ($scope, $http, $q, $timeout) {
 
-    $scope.query = {
-            keywords : 'forest'
+    init();
+
+     if($scope.query.keywords != '') { 
+            $scope.noterms = false;
+            $scope.search();
         };
 
-    $scope.limiters = {
-        type: [],
-        subject: [],
-        dateAfter: '',
-        dateBefore: ''
-        
-    }
 
-    $scope.results = {};
+    function init() {
 
-    var queryOpts = {
-        key: '1068fc55492c7f63c961485c136ee67f',
-        url: 'http://api.dp.la/v2/items?q=',
-        facets: 'sourceResource.date.begin,sourceResource.subject.name,sourceResource.type,sourceResource.spatial.name',
-        size : 10,
-        page : 0
-    };
+        $scope.query = {
+            keywords : ''
+        };
 
-    var apiCall;
+        $scope.noterms = true;
 
+        $scope.limiters = {
+            type: [],
+            subject: [],
+            dateAfter: '',
+            dateBefore: ''
+            
+        }
 
-    function makeApiString() {
-        apiCall = queryOpts.url;
-        apiCall += $scope.query.keywords;
+        $scope.results = {};
 
-        apiCall += ("&sourceResource.type=" + $scope.limiters.type.toString()); 
-        apiCall += ("&sourceResource.subject=" + encodeURI($scope.limiters.subject.toString()));
+        var queryOpts = {
+            key: '1068fc55492c7f63c961485c136ee67f',
+            url: 'http://api.dp.la/v2/items?q=',
+            facets: 'sourceResource.date.begin,sourceResource.subject.name,sourceResource.type,sourceResource.spatial.name&facet_size=100',
+            size : 10,
+            page : 1
+        };
 
-        if ($scope.limiters.dateAfter) { apiCall += ("&sourceResource.date.after=" + $scope.limiters.dateAfter)}
-        if ($scope.limiters.dateBefore) { apiCall += ("&sourceResource.date.before=" + $scope.limiters.dateBefore)}
+        $scope.search = function() {
 
-        apiCall += ("&page_size=" + queryOpts.size);
-        apiCall += ('&facets=' + queryOpts.facets);
-        apiCall += ('&page=' + queryOpts.page);
+            $scope.noterms = false;
 
-        apiCall += ("&callback=JSON_CALLBACK" + '&api_key=' + queryOpts.key);
-    }
+            queryOpts.page = 1;
 
+            $scope.loading = true;
 
-    $scope.search = function() {
+            $scope.endOfResults = false;
 
-        queryOpts.page = 0;
+            makeApiString();
 
-        $scope.loading = true;
+            // console.log('apicall', apiCall);
 
-        makeApiString();
+            $http.jsonp(apiCall).
+                 success(function(data, status, headers, config) {
 
-        console.log('apicall', apiCall);
+                    $scope.loading = false;
+                  
+                    var d = data;
+                    // console.log(d);
 
-        $http.jsonp(apiCall).
-             success(function(data, status, headers, config) {
+                    $scope.count = d.count;
 
-                $scope.loading = false;
-              
-                var d = data;
-                // console.log(d);
+                    $scope.results = d.docs;
 
-                $scope.count = d.count;
-
-                $scope.results = d.docs;
-
-                console.log(d.docs);
+                    console.log(d.docs);
 
 
-                $scope.aggs = {
+                    $scope.aggs = {
 
-                    type : d.facets['sourceResource.type'],
-                    subject : d.facets['sourceResource.subject.name'],
-                    date : d.facets['sourceResource.date.begin'].entries
+                        type : d.facets['sourceResource.type'],
+                        subject : d.facets['sourceResource.subject.name'],
+                        date : d.facets['sourceResource.date.begin'].entries
+                    }
+                    // console.log($scope.aggs.date);
+
+                 }).
+                 error(function(data, status, headers, config) {
+
+                    $scope.loading = false;
+
+                    $scope.error = true;
+
+                });
+        }
+
+        var timeout;
+        $scope.loadMore = function(){
+            clearTimeout(timeout);
+            $scope.loadingMore = true;
+            timeout = setTimeout(function(){
+                if ($scope.noterms || $scope.results.length >= $scope.count){
+                    $scope.endOfResults = true;
+                    return;
+                } else {
+                    loadmore();
                 }
-                // console.log($scope.aggs.date);
+            }, 80);
+        }
 
-             }).
-             error(function(data, status, headers, config) {
+         $scope.addTypeFilter = function(filter) {
+            if($scope.limiters.type.indexOf(filter) < 0 ){
+                $scope.limiters.type.push(filter);
+                $scope.search();
+            }
+        }
 
-                $scope.loading = false;
+        $scope.rmTypeFilter = function(filter) {
+            var i = $scope.limiters.type.indexOf(filter);
+            if (i < 0) { return; } else {
+                $scope.limiters.type.splice(i,1);
+                $scope.search();
+            }
+        }
 
-                $scope.error = true;
+        $scope.addSubjFilter = function(filter) {
+            if($scope.limiters.type.indexOf(filter) < 0 ){
+                $scope.limiters.subject.push(filter);
+                $scope.search();
+            }
+        }
 
+        $scope.rmSubjFilter = function(filter) {
+            var i = $scope.limiters.subject.indexOf(filter);
+            if (i < 0) { return; } else {
+                $scope.limiters.subject.splice(i,1);
+                $scope.search();
+            }
+        }
+
+        $scope.addDateFilter = function(start, end){
+            $scope.limiters.dateAfter = start;
+            $scope.limiters.dateBefore = end;
+            $scope.dateFilter = start + ' to ' + end;
+            $scope.search();
+        }
+
+        $scope.rmDateFilter = function(){
+            $scope.limiters.dateAfter = '';
+            $scope.limiters.dateBefore = '';
+            $scope.dateFilter = '';
+            $scope.search();
+        }
+
+        // pass data from child directives (d3)
+        $scope.onClick = function(f){
+            $scope.$apply(function(){
+                f
             });
-    }
+        }
 
-    $scope.loadMore = function(){
 
-        console.log('LOADMORE', queryOpts.page)
+        var apiCall;
 
-        $scope.loadingMore = true;
 
-        queryOpts.page++;
+        function makeApiString() {
+            apiCall = queryOpts.url;
+            apiCall += $scope.query.keywords;
 
-        makeApiString();
+            apiCall += ("&sourceResource.type=" + encodeURI($scope.limiters.type.toString())); 
+            apiCall += ("&sourceResource.subject=" + encodeURI($scope.limiters.subject.toString()));
 
-        $http.jsonp(apiCall).
-             success(function(data, status, headers, config) {
+            if ($scope.limiters.dateAfter) { apiCall += ("&sourceResource.date.after=" + $scope.limiters.dateAfter)}
+            if ($scope.limiters.dateBefore) { apiCall += ("&sourceResource.date.before=" + $scope.limiters.dateBefore)}
 
-                $scope.loadingMore = false;
+            apiCall += ("&page_size=" + queryOpts.size);
+            apiCall += ('&facets=' + queryOpts.facets);
+            apiCall += ('&page=' + queryOpts.page);
 
-                var d = data;
+            apiCall += ("&callback=JSON_CALLBACK" + '&api_key=' + queryOpts.key);
+        }
 
-                // var existingresults = $scope.results;
+        function loadmore() {
 
-                $scope.results = $scope.results.concat(d.docs);
 
-                console.log($scope.results);
+            console.log($scope.results.length);
 
-             }).
-             error(function(data, status, headers, config) {
+            // if($scope.results.length)
 
-                $scope.loadingMore = false;
+            // console.log('LOADMORE', queryOpts.page)
 
-                $scope.error = true;
+            $scope.loadingMore = true;
 
-            });
+            queryOpts.page++;
 
-    }
+            makeApiString();
 
-    // add & remove filters
+            $http.jsonp(apiCall).
+                 success(function(data, status, headers, config) {
 
-    $scope.addTypeFilter = function(filter) {
-        if($scope.limiters.type.indexOf(filter) < 0 ){
-            $scope.limiters.type.push(filter);
-            $scope.search();
+                    $scope.loadingMore = false;
+
+                    var d = data;
+
+                    // var existingresults = $scope.results;
+
+                    $scope.results = $scope.results.concat(d.docs);
+
+                    // console.log($scope.results);
+
+                 }).
+                 error(function(data, status, headers, config) {
+
+                    $scope.loadingMore = false;
+
+                    $scope.error = true;
+
+                });
         }
     }
 
-    $scope.rmTypeFilter = function(filter) {
-        var i = $scope.limiters.type.indexOf(filter);
-        if (i < 0) { return; } else {
-            $scope.limiters.type.splice(i,1);
-            $scope.search();
-        }
-    }
-
-    $scope.addSubjFilter = function(filter) {
-        if($scope.limiters.type.indexOf(filter) < 0 ){
-            $scope.limiters.subject.push(filter);
-            $scope.search();
-        }
-    }
-
-    $scope.rmSubjFilter = function(filter) {
-        var i = $scope.limiters.subject.indexOf(filter);
-        if (i < 0) { return; } else {
-            $scope.limiters.subject.splice(i,1);
-            $scope.search();
-        }
-    }
-
-    $scope.addDateFilter = function(start, end){
-        $scope.limiters.dateAfter = start;
-        $scope.limiters.dateBefore = end;
-        $scope.dateFilter = start + ' to ' + end;
-        $scope.search();
-    }
-
-    $scope.rmDateFilter = function(){
-        $scope.limiters.dateAfter = '';
-        $scope.limiters.dateBefore = '';
-        $scope.dateFilter = '';
-        $scope.search();
-    }
-
-    // pass data from child directives (d3)
-    $scope.onClick = function(f){
-        $scope.$apply(function(){
-            f
-        });
-    }
-
-    $scope.search();
   });
 
 

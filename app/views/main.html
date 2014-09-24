@@ -1,4 +1,7 @@
-<header class="top">DPLA Data Driven Search Prototype -- @schuyberg, 2014</header>
+<header class="top">
+DPLA Visual Search Prototype -- @schuyberg, 2014
+<a href="" ng-click="noterms=true" class="about-link">About</a>
+</header>
 <div class="search-container row-fluid">
 <form class="search-area" ng-submit="search();">
   <input type="search" name="q" ng-model="query.keywords" class=""> <button type="submit">Go!</button>
@@ -10,39 +13,56 @@
   <button class="limiters" ng-hide="!dateFilter" ng-click="rmDateFilter(l)">Date range: {{dateFilter}}  [x]</button>
 </div>
 </div>
-<div class="loading" ng-show="loading" ng-animate>
-  <p>LOADING ...</p> 
+
+<span ng-hide="!noterms">
+<div class="prompt" >
+  <h3> Enter keywords to search the <a href="http://dp.la" target="_blank">DPLA</a></h3>
 </div>
-<div class="hits">
-  <p>{{ count }} results found.</p>
-    <d3-one-bar data="aggs.type.terms" class="row-fluid type-chart" style="width: 100%;" on-click="addTypeFilter(filter)">
-</div>
-<div class="row">
-<div class="col-sm-4 subj-col">
-    <!-- <p>Subjects:</p> -->
-    <d3-bar-2 class="subj-chart" data="aggs.subject.terms" title="Subjects" class="row-fluid" style="width: 100%;" on-click="addSubjFilter(filter)"></d3-bar-2>
+<div class="about">
+  <h4>About</h4>
+  <p>This is a prototype visual search interface that explores content from the <a href="http://dp.la" target="_blank">Digital Public Library of America</a>. It is desgned to provide an 'at-a-glance' visual overview of search results, and an intuitive means of narrowing the scope of the search. More info and source code on <a href="https://github.com/schuyberg/dplaviz">github</a>.</p>
 </div>
 
- <div class="col-sm-8">
-    <!-- <p>Date range:</p> -->
-    <d3-area data="aggs.date" title="Date range" class="row-fluid date-chart" style="width: 100%;" on-click="addDateFilter(start, end)"></d3-area>
+</span>
 
-<!--     <div class="results-top">
-      Results:
-    </div> -->
-
-    <div class="results">
-      <ul class="result" ng-repeat="r in results track by $index" >
-      <a href="{{r.isShownAt}}" target="_blank"><img ng-hide="!r.object" src="{{r.object}}" alt="{{r.sourceResource.title}}"></a>
-        <li class="title"> <a href="{{r.isShownAt}}" target="_blank">{{r.sourceResource.title}}</a></li>
-        <li > {{r.sourceResource.creator}}</li>
-        <li > {{r.sourceResource.date.displayDate}}</li>
-        <li > {{r.sourceResource.description[0]}}</li>
-        <li class="provider">{{r.provider.name}}</a></li>
-      </ul>
-    </div>
-    
+<div class="main-content" ng-hide="noterms">
+  <div class="loading" ng-show="loading" ng-animate>
+    <p>LOADING ...</p> 
   </div>
+  <div class="hits">
+    <p>{{ count }} results found.</p>
+      <d3-one-bar data="aggs.type.terms" class="row-fluid type-chart" style="width: 100%;" on-click="addTypeFilter(filter)">
+  </div>
+  <div class="row">
+  <div class="col-sm-4 subj-col">
+      <!-- <p>Subjects:</p> -->
+      <d3-bar-2 class="subj-chart" data="aggs.subject.terms" title="Subjects" class="row-fluid" style="width: 100%;" on-click="addSubjFilter(filter)"></d3-bar-2>
+  </div>
+  
+   <div class="col-sm-8">
+      <!-- <p>Date range:</p> -->
+      <d3-area data="aggs.date" title="Date range" class="row-fluid date-chart" style="width: 100%;" on-click="addDateFilter(start, end)"></d3-area>
+  
+  <!--     <div class="results-top">
+        Results:
+      </div> -->
+  
+      <div class="results" infinite-scroll="loadMore()">
+        <!-- <div class="result">Sort by: </div> -->
+        <ul class="result" ng-repeat="r in results track by $index" >
+        <a href="{{r.isShownAt}}" target="_blank"><img ng-hide="!r.object" src="{{r.object}}" alt="{{r.sourceResource.title}}"></a>
+          <li class="title"> <a href="{{r.isShownAt}}" target="_blank">{{r.sourceResource.title}}</a></li>
+          <li > {{r.sourceResource.creator}}</li>
+          <li > {{r.sourceResource.date.displayDate}}</li>
+          <li > {{r.sourceResource.description[0]}}</li>
+          <li class="provider">{{r.provider.name}}</a></li>
+        </ul>
+        <div class="result" ng-show="loadingMore">Loading...</div>
+        <div class="result" ng-show="endOfResults">End of results.</div>
+      </div>
+      
+    </div>
+</div>
   
  
 </div>

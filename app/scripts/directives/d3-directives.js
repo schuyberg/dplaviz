@@ -419,11 +419,8 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                 // set domains
                 x.domain(d3.extent(data, function(d){ return d.date; }));
                 y.domain([0, d3.max(data, function(d){ return d.count; })]);
-
-                // console.log(x.domain(), x.range());
-                // console.log(y.domain(), y.range());
                 
-
+                
                 svg.attr('width', width + margin.left + margin.right)
                     .attr('height', height);
 
@@ -439,12 +436,13 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                         .transition().duration(600)
                         .attr('d', area);
 
-                // add axes
+                // add x axis
                 chart.append('g')
                     .attr('class', 'x axis')
                     .attr('transform', 'translate(0,' + chartHeight + ')')
                     .call(xAxis);
 
+                // add y axis
                 chart.append('g')
                     .attr('class', 'y axis')
                     .call(yAxis)
@@ -455,23 +453,25 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                         .style('text-anchor', 'end');
                         // .text('Count');
 
+                // add title
                 chart.append('g')
                     .attr('class', 'title')
                     .append('text')
-                        .attr('y', 0)
+                        .attr('y', '-5')
                         .attr('x', 20)
                         .style('font-size','0.8em')
                         .style('font-weight', 'bold')
                         .text(title);
 
+                // brush behaviors
                 var brush = d3.svg.brush()
                             .x(x)
-                            .extent(x.domain())
+                            // .extent(x.domain())
                             .on("brushstart", brushstart)
                             .on("brush", brushmove)
                             .on("brushend", brushend);
 
-                // var handle = d3.svg.line();
+                // brush background
                 var brushbg = chart.append('g')
                         .attr('class','brushbg');
 
@@ -487,6 +487,7 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                     .attr('class', 'bbg r')
                     .attr('height', chartHeight);
 
+                // brush ends / 'handles'
                 brushg.selectAll(".resize")
                     .append('rect')
                         .attr('x', '-2')
@@ -509,39 +510,72 @@ d3directives.directive('d3Bar2',['$window', '$timeout', function($window, $timeo
                 // brushmove();
 
                 function brushstart() {
-                    // updateBBG();
-                    // console.log('brushstart', brush.extent());
-                  // svg.classed("selecting", true);
+                    //remove old date labels (if they exist)
+                    brushg.selectAll('.date-label')
+                        .remove();
+
+                    // create date start / end labels
+                    brushg.select('.resize.e')
+                        .append('text')
+                        .attr('class', 'date-label e')
+                        .attr('text-anchor', 'end')
+                        .attr('startOffset', '100%')
+                        .attr('x', '-5')
+                        .style('font-size','0.8em')
+                        .style('text-color', 'red')
+
+                    brushg.select('.resize.w')
+                        .append('text')
+                        .attr('class', 'date-label w')
+                        .attr('x', 5)
+                        .attr('y', 12)
+                        .style('font-size','0.8em')
+                        .style('text-color', 'red')
+
+                    updateDateLabels();
                 }
 
                 function brushmove() {
-                    
-                  var s = brush.extent();
-                  // console.log('brushmove', s);
-                  updateBBG();
-                  // circle.classed("selected", function(d) { return s[0] <= d && d <= s[1]; });
+                    updateBBG();
+                    updateDateLabels();
                 }
 
                 function brushend() {
                     // if empty or full domain return without call to refresh and clear bg
-                  if (brush.empty() || d3.values(brush.extent()).join() === d3.values(x.domain()).join()
-                    ){
-                    brushbg.selectAll('.bbg')
-                        .attr('width', 0);
-                        return;
-                    } else {
+                      if (brush.empty() || d3.values(brush.extent()).join() === d3.values(x.domain()).join()
+                        ){
+                        brushbg.selectAll('.bbg')
+                            .attr('width', 0);
+                            return;
+                        } else {
 
                         var eStart = dateFormat(brush.extent()[0]);
                         var eEnd = dateFormat(brush.extent()[1]);
 
-                        // console.log(eStart, eEnd);
-
+                        // UPDATE DATA
                         return scope.onClick({start: eStart, end: eEnd});
                     }
 
                 }
 
+                function updateDateLabels() {
+
+                    // update brush labels with selected start/end dates
+
+                    brushg.select('.date-label.w')
+                        .text(dateFormat(brush.extent()[0]));
+
+                    brushg.select('.date-label.e')
+                        .text(dateFormat(brush.extent()[1]))
+                        .attr('y', function(){
+                            if(brushg.select('.extent').attr('width') < 132) { return 22} else { return 12}
+                        });
+
+                }
+
                 function updateBBG() {
+
+                    // update background shading around brush selection
 
                     var eX = parseInt(brushg.selectAll('.extent').attr('x'));
                     var eW = parseInt(brushg.selectAll('.extent').attr('width'));
