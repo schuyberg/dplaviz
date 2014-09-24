@@ -91,6 +91,7 @@ angular.module('v2App')
             timeout = setTimeout(function(){
                 if ($scope.noterms || $scope.results.length >= $scope.count){
                     $scope.endOfResults = true;
+                    $scope.loadingMore = false;
                     return;
                 } else {
                     loadmore();
