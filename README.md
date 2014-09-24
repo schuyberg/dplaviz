@@ -1,4 +1,4 @@
-This is a prototype visual search interface that explores content from the [Digital Public Library of America](http://dp.la). It is desgned to provide an 'at-a-glance' visual overview of search results that allows a user to quickly assess whether or not their search was a success, and an intuitive means of narrowing the scope of the search. 
+This is a prototype visual search interface that explores content from the [Digital Public Library of America](http://dp.la). It is designed to provide an 'at-a-glance' visual overview of search results that allows a user to quickly assess whether or not their search was a success, and an intuitive means of narrowing the scope of the search. 
 
 Built and tested with Google Chrome, may or may not work in other browsers.
 
