@@ -8,9 +8,9 @@ DPLA Visual Search Prototype -- @schuyberg, 2014
 </form>
 
 <div class="limits">
-  <button class="limiters" ng-repeat="l in limiters.type" ng-click="rmTypeFilter(l)">Type: {{l}}s  [x]</button>
-  <button class="limiters" ng-repeat="l in limiters.subject" ng-click="rmSubjFilter(l)">Subject: {{l}}  [x]</button>
-  <button class="limiters" ng-hide="!dateFilter" ng-click="rmDateFilter(l)">Date range: {{dateFilter}}  [x]</button>
+  <button class="limiters" ng-repeat="l in limiters.type" ng-click="rmTypeFilter(l)">Type: {{l}}s  <span class="glyphicon glyphicon-remove"></span></button>
+  <button class="limiters" ng-repeat="l in limiters.subject" ng-click="rmSubjFilter(l)">Subject: {{l}}  <span class="glyphicon glyphicon-remove"></span></button>
+  <button class="limiters" ng-hide="!dateFilter" ng-click="rmDateFilter(l)">Date range: {{dateFilter}}  <span class="glyphicon glyphicon-remove"></span></button>
 </div>
 </div>
 
@@ -20,7 +20,7 @@ DPLA Visual Search Prototype -- @schuyberg, 2014
 </div>
 <div class="about">
   <h4>About</h4>
-  <p>This is a prototype visual search interface that explores content from the <a href="http://dp.la" target="_blank">Digital Public Library of America</a>. It is desgned to provide an 'at-a-glance' visual overview of search results, and an intuitive means of narrowing the scope of the search. More info and source code on <a href="https://github.com/schuyberg/dplaviz">github</a>.</p>
+  <p>This is a prototype visual search interface that explores content from the <a href="http://dp.la" target="_blank">Digital Public Library of America</a>. It is designed to provide an 'at-a-glance' visual overview of search results, and an intuitive means of narrowing the scope of the search. More info and source code on <a href="https://github.com/schuyberg/dplaviz">github</a>.</p>
 </div>
 
 </span>
@@ -57,7 +57,7 @@ DPLA Visual Search Prototype -- @schuyberg, 2014
           <li > {{r.sourceResource.description[0]}}</li>
           <li class="provider">{{r.provider.name}}</a></li>
         </ul>
-        <div class="result" ng-show="loadingMore">Loading...</div>
+        <div class="result" ng-show="loadingMore" ng-hide="endOfResults">Loading...</div>
         <div class="result" ng-show="endOfResults">End of results.</div>
       </div>
       

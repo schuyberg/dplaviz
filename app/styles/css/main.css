@@ -366,8 +366,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/bower_components\/bootstrap-sass-official\/vendor\/assets\/stylesheets\/bootstrap\/_glyphicons\.scss}line{font-family:\0000325}}
@@ -8259,8 +8259,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/bower_components\/bootstrap-sass-official\/vendor\/assets\/stylesheets\/bootstrap\/_glyphicons\.scss}line{font-family:\0000325}}
@@ -15954,13 +15954,18 @@ button.limiters {
   font-size: 0.77em;
   margin: 0 3px 6px 0;
   border: 1px solid black;
+  font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003213}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003214}}
+button.limiters .glyphicon {
+  margin-left: 2px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003218}}
 button.limiters:hover {
   border: 1px solid white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003224}}
 .prompt {
   max-width: 600px;
   background: orange;
@@ -15972,11 +15977,11 @@ button.limiters:hover {
   -moz-box-shadow: 4px 4px 19px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 4px 4px 19px 0px rgba(50, 50, 50, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003236}}
 .prompt h2 {
   vertical-align: middle;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003240}}
 .prompt:after {
   max-width: 600px;
   z-index: 100;
@@ -15991,12 +15996,12 @@ button.limiters:hover {
   border-bottom: 20px solid orange;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003251}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003257}}
 .about-link {
   float: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003255}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003261}}
 .about {
   max-width: 600px;
   background: white;
@@ -16005,7 +16010,7 @@ button.limiters:hover {
   border: 1px solid #9f9f9f;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003270}}
 .loading {
   position: absolute;
   display: block;
@@ -16015,7 +16020,7 @@ button.limiters:hover {
   z-index: 100;
   background-color: rgba(250, 250, 250, 0.8);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003280}}
 .loading p {
   display: block;
   position: absolute;
@@ -16027,12 +16032,12 @@ button.limiters:hover {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003286}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003292}}
 .hits {
   margin-top: 6px;
   margin-bottom: 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003289}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003295}}
 .hits p {
   text-align: center;
   display: block;
@@ -16041,18 +16046,18 @@ button.limiters:hover {
   font-weight: bold;
 }
 @media (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003289}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003295}}
   .hits p {
     max-width: 90%;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003306}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003312}}
 .results {
   margin-top: 12px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003316}}
 .result {
   background: white;
   font-size: 0.9em;
@@ -16062,25 +16067,25 @@ button.limiters:hover {
   padding: 1em;
   list-style-type: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003325}}
 .result img {
   float: left;
   margin-right: 6px;
   margin-bottom: 6px;
   max-width: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003331}}
 .result .title {
   font-size: 1.1em;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003335}}
 .result .provider {
   color: green;
 }
 
 @media (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003342}}
   .subj-col {
     max-height: 365px;
     overflow: hidden;
@@ -16092,37 +16097,37 @@ button.limiters:hover {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003356}}
 .axis path, .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003363}}
 .subj-chart .bar:hover {
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003365}}
 .subj-chart .bar:hover text {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003400}}
 .type-chart .too-short {
   opacity: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003405}}
 .type-chart g:hover {
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003401}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003407}}
 .type-chart g:hover .b-text {
   transition: visibility 0s linear 0.3s,opacity 0.3s linear, font-weight 0.3s linear;
   opacity: 0;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003406}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003412}}
 .type-chart g:hover > .b-text {
   visibility: visible;
   font-weight: bold;
@@ -16130,40 +16135,40 @@ button.limiters:hover {
   transition-delay: 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003415}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003421}}
 .brush {
   .shape-rendering: crispEdges;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003417}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003423}}
 .brush .extent {
   fill: none;
   fill-opacity: .125;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003424}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003430}}
 .brushbg .bbg {
   fill: black;
   fill-opacity: .125;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003431}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003437}}
 .loading.ng-hide-add, .loading.ng-hide-remove {
   transition: 0s linear all;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003435}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003441}}
 .loading.ng-hide-add-active,
 .loading.ng-hide-remove-active {
   /* the transition is defined in the active class */
   transition: 1s linear all;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003441}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003447}}
 .loading.ng-hide-remove-active {
   -webkit-animation: fadeIn 3s;
   animation: fadeInRight 3s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003445}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slindber\/Dev\/dplaviz\/v2\/app\/styles\/scss\/main\.scss}line{font-family:\00003451}}
 .loading.ng-hide-add-active {
   -webkit-animation: fadeOut 3s;
   animation: fadeOut 3s;

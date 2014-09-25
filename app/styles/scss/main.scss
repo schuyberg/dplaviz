@@ -1,4 +1,4 @@
-$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$icon-font-path: "../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 @import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 
@@ -209,10 +209,16 @@ button.limiters {
     font-size: 0.77em;
     margin:0 3px 6px 0;
     border: 1px solid black;
+    font-weight: bold;
+
+    .glyphicon {
+        margin-left: 2px;
+    }
 
     &:hover {
         border: 1px solid white;
     }
+
 }
 
 .prompt {

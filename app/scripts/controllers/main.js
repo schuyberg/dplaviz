@@ -90,8 +90,8 @@ angular.module('v2App')
             $scope.loadingMore = true;
             timeout = setTimeout(function(){
                 if ($scope.noterms || $scope.results.length >= $scope.count){
-                    $scope.endOfResults = true;
                     $scope.loadingMore = false;
+                    $scope.endOfResults = true;
                     return;
                 } else {
                     loadmore();
