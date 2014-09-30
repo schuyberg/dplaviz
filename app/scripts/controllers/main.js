@@ -158,8 +158,8 @@ angular.module('v2App')
             apiCall = queryOpts.url;
             apiCall += $scope.query.keywords;
 
-            apiCall += ("&sourceResource.type=" + encodeURI($scope.limiters.type.toString())); 
-            apiCall += ("&sourceResource.subject=" + encodeURI($scope.limiters.subject.toString()));
+            apiCall += ("&sourceResource.type=" + $scope.limiters.type.toString()); 
+            apiCall += ("&sourceResource.subject.name=" + encodeURI($scope.limiters.subject.toString()));
 
             if ($scope.limiters.dateAfter) { apiCall += ("&sourceResource.date.after=" + $scope.limiters.dateAfter)}
             if ($scope.limiters.dateBefore) { apiCall += ("&sourceResource.date.before=" + $scope.limiters.dateBefore)}
