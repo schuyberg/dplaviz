@@ -5,8 +5,9 @@ Built and tested with Google Chrome, may or may not work in other browsers.
 See it online [here](http://www.schuyberg.com/dplaviz).
 
 Known issues and next steps:
-- Escape boolean terms in subject queries
-- Add sorting
+- Fix limiting by 'physical objects' and 'moving images'
+- Improve date limiting (use mean date instead of begin date to calculate range?)
+- Add sort by
 - Add routing
 - Improve subject facet legibility
 
